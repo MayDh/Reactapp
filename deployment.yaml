@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: reactapp-deployment
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: reactapp
+  template:
+    metadata:
+      labels:
+        app: reactapp
+    spec:
+      containers:
+        - name: reactapp
+          image: mayssadhahri/monapp:latest
+          ports:
+            - containerPort: 3000
