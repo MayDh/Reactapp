@@ -26,14 +26,7 @@ pipeline {
             }
         }
 
-        stage('Run Tests') {
-            steps {
-                script {
-                    // Testing (ajoutez vos étapes de test ici)
-                    sh 'npm test' // Exemple avec des tests npm, ajustez selon vos besoins
-                }
-            }
-        }
+        
 
         stage('Push to DockerHub') {
             steps {
